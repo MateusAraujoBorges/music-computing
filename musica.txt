@@ -1,0 +1,46 @@
+Simule o efeito de Reverberacao e Eco 
+- function outputFileName = reverbEcho(inputFileName, delayVect, attenuationVect) 
+Implemente um Low pass filter function 
+- outputFileName = simpleLowPass(inputFileName) 
+
+
+Sintese subtrativa: Gere um sinal das seguintes formas e posterirmente aplique o filtro implementado (simpleLowPass)
+- Sinusoid, Triangular, Saw, Tooth Square 
+Sintese aditiva (utilizando o gerador de senoidais visto) 
+- function outputFileName = addSinusoids(sinVector, sinAmps, sampleRate, numBits) 
+
+---
+
+ler wav = wavread
+escrever wav = wavwrite
+tocar = sound(vetor,frequencia)
+
+----
+
+loops:
+
+>> A = [ [1 2 3]' [3 2 1]' [2 1 3]']
+
+A =
+
+     1     3     2
+     2     2     1
+     3     1     3
+
+>> B = A;
+>> for j=2:3,
+    A(j,:) = A(j,:) - A(j-1,:)
+end
+
+A =
+
+     1     3     2
+     1    -1    -1
+     3     1     3
+
+
+A =
+
+     1     3     2
+     1    -1    -1
+     2     2     4
