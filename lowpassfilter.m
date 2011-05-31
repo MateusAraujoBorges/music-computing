@@ -6,7 +6,7 @@ function [output] = lowpassfilter(input)
   tmp = [0; input]; % adicionei um zero para facilitar o calculo de y[1]
   out = tmp;
 
-  pp = size(tmp,1)
+  pp = size(tmp,1); % apenas debug
   for i = 2 : (size(tmp,1)); %itere por todos os elementos do vetor de entrada
     a = tmp(i);
     b = tmp(i-1);
