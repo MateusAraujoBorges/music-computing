@@ -14,7 +14,7 @@ for j = 1 : (size(input,1));
    if (j-delay) > 0
      xval = input(j-delay);
      yval = out(j-delay);
-   endif
+   end
 
    out(j) = (input(j) * gain * (-1)) + xval + (gain * yval);
 end
