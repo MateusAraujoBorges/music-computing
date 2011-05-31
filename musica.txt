@@ -1,5 +1,7 @@
 Simule o efeito de Reverberacao e Eco 
 - function outputFileName = reverbEcho(inputFileName, delayVect, attenuationVect) 
+- delayVect sera o valor do delay de cada filtro - mesma coisa pra attenuationVect
+
 Implemente um Low pass filter function 
 - outputFileName = simpleLowPass(inputFileName) 
 

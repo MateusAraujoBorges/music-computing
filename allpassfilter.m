@@ -1,7 +1,7 @@
 function [output] = allpassfilter(input,gain,delay)
 %ALLPASSFILTER filtro passa-tudo
-%input deve ser um vetor (1xN). gain e delay sao escalares.
-%output eh um vetor
+%input deve ser um vetor (Nx1). gain e delay sao escalares.
+%output eh um vetor (Nx1)
 out = input;
 
 %tmp = (delay+1):(size(out,2))
