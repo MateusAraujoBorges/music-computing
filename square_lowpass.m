@@ -1,8 +1,10 @@
 function [output] = square_lowpass(interval,nPeriods)
-%SAWTOOTH_LOWPASS gera um sinal com formato dente-de-serra e passa ele no filtro passa-baixa
+%SQUARE_LOWPASS gera um sinal com formato quadrado e passa ele no filtro passa-baixa
 %interval - numero de amostras em um periodo da onda
 %nPeriods - numero de periodos do sinal
 %output - Vetor Nx1 contendo a onda square apos a aplicacao do filtro passa-baixa
+%
+% exemplo: square_lowpass(20,100)
 
 vecH = ones(1,interval);
 vecL = zeros(1,interval);
